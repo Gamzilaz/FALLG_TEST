@@ -41,9 +41,9 @@
       position: absolute;
       top: 10px;
       left: 10px;
-      color: #FFD700;
+      color: #a20000;
       font-family: Arial, sans-serif;
-      font-size: 24px;
+      font-size: 50px;
       z-index: 100;
     }
   </style>
@@ -207,7 +207,7 @@
       }
 
       // Интервал для появления монет (каждые 2 секунды)
-      setInterval(spawnCoin, 2000);
+      setInterval(spawnCoin, 5000);
 
       // Освещение
       const sunLight = new THREE.DirectionalLight(0xffffff, 1);
@@ -254,7 +254,7 @@
       const coinGeometry = new THREE.CylinderGeometry(0.5, 0.5, 0.1, 32);
       const coinMaterial = new THREE.MeshStandardMaterial({ 
         color: 0xFFD700, 
-        emissive: 0xFFD700,
+        emissive: 0xF5D700,
         emissiveIntensity: 1
       });
       const coin = new THREE.Mesh(coinGeometry, coinMaterial);

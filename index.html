@@ -164,6 +164,9 @@
       bots.push(createBot(0xff0000, new THREE.Vector3(-10, 1, -10)));
       bots.push(createBot(0x00ff00, new THREE.Vector3(10, 1, 10)));
       bots.push(createBot(0x0000ff, new THREE.Vector3(-10, 1, 10)));
+      bots.push(createBot(0xffff00, new THREE.Vector3(10, 1, -10)));
+      bots.push(createBot(0x8a00ff, new THREE.Vector3(10, 1, -10)));
+      bots.push(createBot(0xff8a00, new THREE.Vector3(-10, 1, 10)));
       bots.forEach(bot => scene.add(bot.group));
 
       // Статичные платформы (лесенка)

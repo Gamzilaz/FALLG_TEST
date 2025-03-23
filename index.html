@@ -4,6 +4,36 @@
   <meta charset="UTF-8">
   <title>3D Игра на Three.js – персонажи, сбор монет, боты и прыжки</title>
   <style>
+    /* Стили для отображения splash-экрана с PNG-картинкой */
+#splashScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent; /* фон прозрачный для PNG с альфа-каналом */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  /* Анимация исчезновения: запускается через 5 секунд, длится 1 секунду */
+  animation: fadeOut 1s forwards 5s;
+}
+
+/* Ключевые кадры для плавного исчезновения splash-экрана */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* Стили для картинки внутри splashScreen */
+#splashScreen img {
+  width: 80.5%;       /* Ширина будет составлять 50% от ширины родительского элемента */
+  max-width: 500px;  /* Но не более 300 пикселей */
+  height: auto;     /* Высота подстраивается пропорционально, чтобы сохранить соотношение сторон */
+}
+
     body { margin: 0; overflow: hidden; }
     canvas { display: block; }
     /* Элемент для отображения счёта основного игрока */
